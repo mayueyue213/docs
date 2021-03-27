@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>compiler</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/docs/images/mayueyue-32.png">
+    <meta name="description" content="前端框架学习笔记">
+    <meta name="keywords" content="前端框架学习笔记">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.08650e20.css" as="style"><link rel="preload" href="/docs/assets/js/app.190980ee.js" as="script"><link rel="preload" href="/docs/assets/js/2.a1086257.js" as="script"><link rel="preload" href="/docs/assets/js/26.f7827a3a.js" as="script"><link rel="preload" href="/docs/assets/js/10.1b4016bc.js" as="script"><link rel="preload" href="/docs/assets/js/3.e71b4cdf.js" as="script"><link rel="prefetch" href="/docs/assets/js/11.6171a178.js"><link rel="prefetch" href="/docs/assets/js/12.391a75ee.js"><link rel="prefetch" href="/docs/assets/js/13.90a0e93c.js"><link rel="prefetch" href="/docs/assets/js/14.c7535136.js"><link rel="prefetch" href="/docs/assets/js/15.fa27cddc.js"><link rel="prefetch" href="/docs/assets/js/16.58704833.js"><link rel="prefetch" href="/docs/assets/js/17.e0f045a2.js"><link rel="prefetch" href="/docs/assets/js/18.57b86ee2.js"><link rel="prefetch" href="/docs/assets/js/19.1f2a52c9.js"><link rel="prefetch" href="/docs/assets/js/20.ba01c220.js"><link rel="prefetch" href="/docs/assets/js/21.92d74d26.js"><link rel="prefetch" href="/docs/assets/js/22.6f84d94f.js"><link rel="prefetch" href="/docs/assets/js/23.ac75d99e.js"><link rel="prefetch" href="/docs/assets/js/24.81576b1f.js"><link rel="prefetch" href="/docs/assets/js/25.da58a129.js"><link rel="prefetch" href="/docs/assets/js/27.c72cf530.js"><link rel="prefetch" href="/docs/assets/js/28.b2f4742d.js"><link rel="prefetch" href="/docs/assets/js/29.b67c1a25.js"><link rel="prefetch" href="/docs/assets/js/30.73130b1a.js"><link rel="prefetch" href="/docs/assets/js/31.c5927374.js"><link rel="prefetch" href="/docs/assets/js/32.c3ee9d77.js"><link rel="prefetch" href="/docs/assets/js/33.c401e9a6.js"><link rel="prefetch" href="/docs/assets/js/34.83f6c1a3.js"><link rel="prefetch" href="/docs/assets/js/35.5e834a0b.js"><link rel="prefetch" href="/docs/assets/js/36.2ab7845b.js"><link rel="prefetch" href="/docs/assets/js/37.d3b3e889.js"><link rel="prefetch" href="/docs/assets/js/38.b8d50d63.js"><link rel="prefetch" href="/docs/assets/js/39.4847e503.js"><link rel="prefetch" href="/docs/assets/js/4.c9b475bd.js"><link rel="prefetch" href="/docs/assets/js/40.7fc1c301.js"><link rel="prefetch" href="/docs/assets/js/41.4fe1d6de.js"><link rel="prefetch" href="/docs/assets/js/42.0bf260e6.js"><link rel="prefetch" href="/docs/assets/js/43.172a74c6.js"><link rel="prefetch" href="/docs/assets/js/44.02efff9b.js"><link rel="prefetch" href="/docs/assets/js/45.b820585a.js"><link rel="prefetch" href="/docs/assets/js/46.b7bd25c2.js"><link rel="prefetch" href="/docs/assets/js/47.c0a93301.js"><link rel="prefetch" href="/docs/assets/js/48.d921edcb.js"><link rel="prefetch" href="/docs/assets/js/49.bbdda157.js"><link rel="prefetch" href="/docs/assets/js/5.7e4976c9.js"><link rel="prefetch" href="/docs/assets/js/50.72efec01.js"><link rel="prefetch" href="/docs/assets/js/51.50328775.js"><link rel="prefetch" href="/docs/assets/js/52.a09440db.js"><link rel="prefetch" href="/docs/assets/js/53.6b83e427.js"><link rel="prefetch" href="/docs/assets/js/54.25da7982.js"><link rel="prefetch" href="/docs/assets/js/55.bec4dd88.js"><link rel="prefetch" href="/docs/assets/js/56.2a701c3e.js"><link rel="prefetch" href="/docs/assets/js/57.21a3b998.js"><link rel="prefetch" href="/docs/assets/js/58.9a793cc1.js"><link rel="prefetch" href="/docs/assets/js/59.4296c109.js"><link rel="prefetch" href="/docs/assets/js/6.898b8bb7.js"><link rel="prefetch" href="/docs/assets/js/60.a9f4b200.js"><link rel="prefetch" href="/docs/assets/js/61.3adda7c1.js"><link rel="prefetch" href="/docs/assets/js/62.2a7c78df.js"><link rel="prefetch" href="/docs/assets/js/63.a4623b8f.js"><link rel="prefetch" href="/docs/assets/js/64.ff23ca49.js"><link rel="prefetch" href="/docs/assets/js/65.d8c6bdc1.js"><link rel="prefetch" href="/docs/assets/js/66.fdb403a1.js"><link rel="prefetch" href="/docs/assets/js/67.018c9439.js"><link rel="prefetch" href="/docs/assets/js/68.61c1d3ea.js"><link rel="prefetch" href="/docs/assets/js/69.3d48a467.js"><link rel="prefetch" href="/docs/assets/js/7.eff4544f.js"><link rel="prefetch" href="/docs/assets/js/70.c6dc6efe.js"><link rel="prefetch" href="/docs/assets/js/8.5cde8233.js"><link rel="prefetch" href="/docs/assets/js/9.8423c1b5.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.08650e20.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/images/mayueyue.png" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/vue/v2/" class="nav-link router-link-active">
+  框架学习
+</a></div><div class="nav-item"><a href="/docs/manual/" class="nav-link">
+  工程师手册
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  代码规范
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/vue/v2/" class="nav-link router-link-active">
+  框架学习
+</a></div><div class="nav-item"><a href="/docs/manual/" class="nav-link">
+  工程师手册
+</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link">
+  代码规范
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>介绍</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/vue/v2/introduction/main.html" class="sidebar-link">叙述逻辑</a></li><li><a href="/docs/vue/v2/introduction/style.html" class="sidebar-link">展示约定</a></li><li><a href="/docs/vue/v2/introduction/demo.html" class="sidebar-link">示例</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>整体结构</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/vue/v2/overview/dir.html" class="sidebar-link">源码目录</a></li><li><a href="/docs/vue/v2/overview/entry.html" class="sidebar-link">编译入口</a></li><li><a href="/docs/vue/v2/overview/constructor.html" class="sidebar-link">Vue 构造函数</a></li><li><a href="/docs/vue/v2/overview/new-vue.html" class="sidebar-link">new Vue</a></li><li><a href="/docs/vue/v2/overview/mount.html" class="sidebar-link">mount</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>编译</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/vue/v2/compiler/main.html" aria-current="page" class="active sidebar-link">compiler</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/vue/v2/compiler/main.html#例子" class="sidebar-link">例子</a></li><li class="sidebar-sub-header"><a href="/docs/vue/v2/compiler/main.html#编译位置" class="sidebar-link">编译位置</a></li><li class="sidebar-sub-header"><a href="/docs/vue/v2/compiler/main.html#basecompile" class="sidebar-link">baseCompile</a></li><li class="sidebar-sub-header"><a href="/docs/vue/v2/compiler/main.html#compile" class="sidebar-link">compile</a></li><li class="sidebar-sub-header"><a href="/docs/vue/v2/compiler/main.html#compiletofunctions" class="sidebar-link">compileToFunctions</a></li><li class="sidebar-sub-header"><a href="/docs/vue/v2/compiler/main.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/docs/vue/v2/compiler/ast.html" class="sidebar-link">AST</a></li><li><a href="/docs/vue/v2/compiler/ast-parse.html" class="sidebar-link">parse</a></li><li><a href="/docs/vue/v2/compiler/ast-optimize.html" class="sidebar-link">optimize</a></li><li><a href="/docs/vue/v2/compiler/codegen.html" class="sidebar-link">codegen</a></li><li><a href="/docs/vue/v2/compiler/to-function.html" class="sidebar-link">compileToFunctions</a></li><li><a href="/docs/vue/v2/compiler/q-and-a.html" class="sidebar-link">答疑</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>渲染</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/vue/v2/render/" class="sidebar-link">章节概述</a></li><li><a href="/docs/vue/v2/render/vdom.html" class="sidebar-link">Virtual DOM</a></li><li><a href="/docs/vue/v2/render/watcher.html" class="sidebar-link">Watcher</a></li><li><a href="/docs/vue/v2/render/render.html" class="sidebar-link">render</a></li><li><a href="/docs/vue/v2/render/update.html" class="sidebar-link">update</a></li><li><a href="/docs/vue/v2/render/create-element.html" class="sidebar-link">createElement</a></li><li><a href="/docs/vue/v2/render/create-component-vnode.html" class="sidebar-link">createComponentVnode</a></li><li><a href="/docs/vue/v2/render/patch.html" class="sidebar-link">patch</a></li><li><a href="/docs/vue/v2/render/create-elm.html" class="sidebar-link">createElm</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>响应式原理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/vue/v2/ssr/main.html" class="sidebar-link">Vue Router</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue Router</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/vue/v2/vue-router/" class="sidebar-link">介绍</a></li><li><a href="/docs/vue/v2/vue-router/install.html" class="sidebar-link">安装</a></li><li><a href="/docs/vue/v2/vue-router/main.html" class="sidebar-link">三个模块</a></li><li><a href="/docs/vue/v2/vue-router/route-map.html" class="sidebar-link">路由表</a></li><li><a href="/docs/vue/v2/vue-router/transition.html" class="sidebar-link">路由切换</a></li><li><a href="/docs/vue/v2/vue-router/match.html" class="sidebar-link">match</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vuex</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/vue/v2/vuex/" class="sidebar-link">介绍</a></li><li><a href="/docs/vue/v2/vuex/install.html" class="sidebar-link">安装</a></li><li><a href="/docs/vue/v2/vuex/modules.html" class="sidebar-link">模块</a></li><li><a href="/docs/vue/v2/vuex/api.html" class="sidebar-link">API</a></li><li><a href="/docs/vue/v2/vuex/plugin.html" class="sidebar-link">插件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>SSR</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/vue/v2/nuxt/main.html" class="sidebar-link">Vue Router</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="compiler"><a href="#compiler" class="header-anchor">#</a> compiler</h1> <p>前面在<code>new Vue</code>的说明过程中，我们知道在<code>_init</code>函数中，<code>created</code>之后是<code>$mount</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">_init</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options<span class="token operator">?</span><span class="token operator">:</span> Object</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token function">callHook</span><span class="token punctuation">(</span>vm<span class="token punctuation">,</span> <span class="token string">'created'</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>vm<span class="token punctuation">.</span>$options<span class="token punctuation">.</span>el<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    vm<span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>$options<span class="token punctuation">.</span>el<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>$mount</code>定义在<code data-v-37f6a6d8>src/platforms/web/entry-runtime-with-compiler.js</code>，这级入口添加的核心内容是<code>compiler</code>，这一章我们就研究它。</p> <h2 id="例子"><a href="#例子" class="header-anchor">#</a> 例子</h2> <p>本文说明过程中采用的例子是 <div code="" data-v-c7d33b26><!----> <!---->  <pre data-v-c7d33b26>const app = new Vue({
+  template: '&lt;div class=&quot;header&quot;&gt;hello &lt;span&gt;world&lt;/span&gt;&lt;/div&gt;'
+})
+
+app.$mount('#app')</pre> <!----></div></p> <h2 id="编译位置"><a href="#编译位置" class="header-anchor">#</a> 编译位置</h2> <p>在<code>beforeCreate</code>到<code>created</code>之间，是根据<code>options</code>去设置<code>vm</code>，这个过程中对<code>options</code>的使用并未用到<code>template</code>，只是<code>data</code>，<code>methods</code>等。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> compileToFunctions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./compiler/index'</span>
+
+<span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">$mount</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>
+  <span class="token parameter">el<span class="token operator">?</span><span class="token operator">:</span> string <span class="token operator">|</span> Element<span class="token punctuation">,</span>
+  hydrating<span class="token operator">?</span><span class="token operator">:</span> boolean</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> Component <span class="token punctuation">{</span>
+  el <span class="token operator">=</span> el <span class="token operator">&amp;&amp;</span> <span class="token function">query</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>el <span class="token operator">===</span> document<span class="token punctuation">.</span>body <span class="token operator">||</span> el <span class="token operator">===</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span> <span class="token operator">&amp;&amp;</span> <span class="token function">warn</span><span class="token punctuation">(</span>
+      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Do not mount Vue to &lt;html&gt; or &lt;body&gt; - mount to normal elements instead.</span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// resolve template/el and convert to render function</span>
+  <span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$options
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>options<span class="token punctuation">.</span>render<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...resolve template/el</span>
+
+    <span class="token comment">// template to rener functions</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>template<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> render<span class="token punctuation">,</span> staticRenderFns <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">compileToFunctions</span><span class="token punctuation">(</span>template<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        outputSourceRange<span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span><span class="token punctuation">,</span>
+        shouldDecodeNewlines<span class="token punctuation">,</span>
+        shouldDecodeNewlinesForHref<span class="token punctuation">,</span>
+        delimiters<span class="token operator">:</span> options<span class="token punctuation">.</span>delimiters<span class="token punctuation">,</span>
+        comments<span class="token operator">:</span> options<span class="token punctuation">.</span>comments
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span>
+      options<span class="token punctuation">.</span>render <span class="token operator">=</span> render
+      options<span class="token punctuation">.</span>staticRenderFns <span class="token operator">=</span> staticRenderFns
+      <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token function">mount</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> el<span class="token punctuation">,</span> hydrating<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>三个核心内容</p> <ul><li>query el</li> <li>resolve template/el</li> <li>template to render functions</li></ul> <p>研究编译过程，关注点在第三部分，核心函数是<code>compileToFunctions</code>，它定义在<code data-v-37f6a6d8>src/platforms/web/compiler/index.js</code>，代码如下</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> baseOptions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./options'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createCompiler <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'compiler/index'</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> compile<span class="token punctuation">,</span> compileToFunctions <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">createCompiler</span><span class="token punctuation">(</span>baseOptions<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span> compile<span class="token punctuation">,</span> compileToFunctions <span class="token punctuation">}</span>
+</code></pre></div><p>这里的<code>baseOptions</code>就是一些内置的指令，模块等，暂时不用理会，继续深入是<code data-v-37f6a6d8>src/compiler/index.js</code>，这是编译器的核心。</p> <h2 id="basecompile"><a href="#basecompile" class="header-anchor">#</a> baseCompile</h2> <p><code data-v-37f6a6d8>src/compiler/index.js</code>代码如下</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> parse <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./parser/index'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> optimize <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./optimizer'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> generate <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./codegen/index'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createCompilerCreator <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./create-compiler'</span>
+
+<span class="token comment">// `createCompilerCreator` allows creating compilers that use alternative</span>
+<span class="token comment">// parser/optimizer/codegen, e.g the SSR optimizing compiler.</span>
+<span class="token comment">// Here we just export a default compiler using the default parts.</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> createCompiler <span class="token operator">=</span> <span class="token function">createCompilerCreator</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">baseCompile</span> <span class="token punctuation">(</span>
+  <span class="token parameter">template<span class="token operator">:</span> string<span class="token punctuation">,</span>
+  options<span class="token operator">:</span> CompilerOptions</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> CompiledResult <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> ast <span class="token operator">=</span> <span class="token function">parse</span><span class="token punctuation">(</span>template<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>optimize <span class="token operator">!==</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">optimize</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span> options<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> code <span class="token operator">=</span> <span class="token function">generate</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span> options<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    ast<span class="token punctuation">,</span>
+    render<span class="token operator">:</span> code<span class="token punctuation">.</span>render<span class="token punctuation">,</span>
+    staticRenderFns<span class="token operator">:</span> code<span class="token punctuation">.</span>staticRenderFns
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><code>baseCompile</code>翻译过来就是基本编译，这里是编译的核心过程，也可以理解为 <strong>核心编译</strong>，包含三个步骤：</p> <ul><li>parse：AST生成；</li> <li>optimize：AST优化；</li> <li>generate：代码生成，生成的是渲染函数 render fns；</li></ul> <p>根据本文示例，返回的内容如下</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">return</span> <span class="token punctuation">{</span>
+  ast<span class="token operator">:</span> <span class="token punctuation">{</span>
+    attrsList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    attrsMap<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token keyword">class</span><span class="token operator">:</span> <span class="token string">&quot;header&quot;</span><span class="token punctuation">}</span>
+    children<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>…<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span><span class="token punctuation">]</span>
+    end<span class="token operator">:</span> <span class="token number">49</span>
+    parent<span class="token operator">:</span> <span class="token keyword">undefined</span>
+    plain<span class="token operator">:</span> <span class="token boolean">false</span>
+    rawAttrsMap<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token keyword">class</span><span class="token operator">:</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span><span class="token punctuation">}</span>
+    start<span class="token operator">:</span> <span class="token number">0</span>
+    <span class="token keyword">static</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    staticClass<span class="token operator">:</span> <span class="token string">&quot;\&quot;header\&quot;&quot;</span>
+    staticInFor<span class="token operator">:</span> <span class="token boolean">false</span>
+    staticProcessed<span class="token operator">:</span> <span class="token boolean">true</span>
+    staticRoot<span class="token operator">:</span> <span class="token boolean">true</span>
+    tag<span class="token operator">:</span> <span class="token string">&quot;div&quot;</span>
+    type<span class="token operator">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  render<span class="token operator">:</span><span class="token string">&quot;with(this){return _m(0)}&quot;</span><span class="token punctuation">,</span>
+  staticRenderFns<span class="token operator">:</span> <span class="token string">&quot;with(this){return _c('div',{staticClass:\&quot;header\&quot;},[_c('span',[_v(\&quot;world\&quot;)])])}&quot;</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong><code>render</code>和<code>staticRenderFns</code>保存的都是所谓的中间代码，到这里，还不是 函数哦</strong>。</p> <p>继续深入是<code>createCompilerCreator</code>，其中涉及到一个重要函数<code>compile</code>，因此单独写成一小节。</p> <h2 id="compile"><a href="#compile" class="header-anchor">#</a> compile</h2> <p><code>createCompilerCreator</code>在 <code data-v-37f6a6d8>src/compiler/create-compiler.js</code>，代码如下</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createCompilerCreator</span> <span class="token punctuation">(</span><span class="token parameter">baseCompile<span class="token operator">:</span> Function</span><span class="token punctuation">)</span><span class="token operator">:</span> Function <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token function">createCompiler</span> <span class="token punctuation">(</span><span class="token parameter">baseOptions<span class="token operator">:</span> CompilerOptions</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">compile</span> <span class="token punctuation">(</span>
+      <span class="token parameter">template<span class="token operator">:</span> string<span class="token punctuation">,</span>
+      options<span class="token operator">?</span><span class="token operator">:</span> CompilerOptions</span>
+    <span class="token punctuation">)</span><span class="token operator">:</span> CompiledResult <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> finalOptions <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>baseOptions<span class="token punctuation">)</span>
+      <span class="token comment">// ...</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// merge custom modules</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>modules<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          finalOptions<span class="token punctuation">.</span>modules <span class="token operator">=</span>
+            <span class="token punctuation">(</span>baseOptions<span class="token punctuation">.</span>modules <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>modules<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// merge custom directives</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>directives<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          finalOptions<span class="token punctuation">.</span>directives <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span>
+            Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>baseOptions<span class="token punctuation">.</span>directives <span class="token operator">||</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            options<span class="token punctuation">.</span>directives
+          <span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// copy other options</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key <span class="token keyword">in</span> options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">!==</span> <span class="token string">'modules'</span> <span class="token operator">&amp;&amp;</span> key <span class="token operator">!==</span> <span class="token string">'directives'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            finalOptions<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> options<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+      finalOptions<span class="token punctuation">.</span>warn <span class="token operator">=</span> warn
+
+      <span class="token keyword">const</span> compiled <span class="token operator">=</span> <span class="token function">baseCompile</span><span class="token punctuation">(</span>template<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> finalOptions<span class="token punctuation">)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">'production'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">detectErrors</span><span class="token punctuation">(</span>compiled<span class="token punctuation">.</span>ast<span class="token punctuation">,</span> warn<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// errors和tips用来在dev下做提示</span>
+      compiled<span class="token punctuation">.</span>errors <span class="token operator">=</span> errors
+      compiled<span class="token punctuation">.</span>tips <span class="token operator">=</span> tips
+      <span class="token keyword">return</span> compiled
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      compile<span class="token punctuation">,</span>
+      compileToFunctions<span class="token operator">:</span> <span class="token function">createCompileToFunctionFn</span><span class="token punctuation">(</span>compile<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这又是一个HOC，定义了一个<code>compile</code>函数，其功能是将系统预置的模块、指令与用户配置的做合并，就是在<code>baseCompile</code>的基础上增加了一些属性，一些功能，两者的关系正如两者名称表现的一样。</p> <p>这里返回的另一个属性是<code>compileToFunctions</code>，在下一小节单独说明。</p> <h2 id="compiletofunctions"><a href="#compiletofunctions" class="header-anchor">#</a> compileToFunctions</h2> <p><code>compileToFunctions</code>是<code>createCompileToFunctionFn</code>的返回，又双叒叒 HOC</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createCompileToFunctionFn</span> <span class="token punctuation">(</span><span class="token parameter">compile<span class="token operator">:</span> Function</span><span class="token punctuation">)</span><span class="token operator">:</span> Function <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> cache <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token function">compileToFunctions</span><span class="token punctuation">(</span><span class="token parameter">compile</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+    <span class="token keyword">const</span> compiled <span class="token operator">=</span> <span class="token function">compile</span><span class="token punctuation">(</span>template<span class="token punctuation">,</span> options<span class="token punctuation">)</span>
+
+    <span class="token comment">// turn code into functions</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">const</span> fnGenErrors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    res<span class="token punctuation">.</span>render <span class="token operator">=</span> <span class="token function">createFunction</span><span class="token punctuation">(</span>compiled<span class="token punctuation">.</span>render<span class="token punctuation">,</span> fnGenErrors<span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span>staticRenderFns <span class="token operator">=</span> compiled<span class="token punctuation">.</span>staticRenderFns<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">code</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">createFunction</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span> fnGenErrors<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// ...</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>cache<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> res<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>一路查找下来，到这里总算是没有更深一层的HOC了。这个函数的功能，就是调用<code>createFunction</code>，将前面在<code>generate</code>得到的<code>render</code>和<code>staticRenderFns</code>转换为真正的函数，这是为后面的渲染过程使用准备的。</p> <p>这层层的HOC嵌套，调用关系较为复杂，我提取整理了一下，如下</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">baseCompile</span> <span class="token punctuation">(</span>
+  <span class="token parameter">template<span class="token operator">:</span> string<span class="token punctuation">,</span>
+  options<span class="token operator">:</span> CompilerOptions</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> CompiledResult <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> ast <span class="token operator">=</span> <span class="token function">parse</span><span class="token punctuation">(</span>template<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> options<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>optimize <span class="token operator">!==</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">optimize</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span> options<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> code <span class="token operator">=</span> <span class="token function">generate</span><span class="token punctuation">(</span>ast<span class="token punctuation">,</span> options<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    ast<span class="token punctuation">,</span>
+    render<span class="token operator">:</span> code<span class="token punctuation">.</span>render<span class="token punctuation">,</span>
+    staticRenderFns<span class="token operator">:</span> code<span class="token punctuation">.</span>staticRenderFns
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">compile</span><span class="token punctuation">(</span><span class="token parameter">template<span class="token operator">:</span> string<span class="token punctuation">,</span> options<span class="token operator">?</span><span class="token operator">:</span> CompilerOptions</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> finalOptions <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>baseOptions<span class="token punctuation">)</span>
+  <span class="token comment">// merge custom modules to </span>
+  <span class="token comment">// merge custom directives</span>
+  <span class="token keyword">const</span> compiled <span class="token operator">=</span> <span class="token function">baseCompile</span><span class="token punctuation">(</span>template<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> finalOptions<span class="token punctuation">)</span>
+  <span class="token comment">// ...</span>
+  <span class="token keyword">return</span> compiled<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 注意：这个是指内部的compileToFunctions，并不是本文一开始的那个入口的</span>
+<span class="token keyword">function</span> <span class="token function">compileToFunctions</span><span class="token punctuation">(</span><span class="token parameter">compile</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token keyword">const</span> compiled <span class="token operator">=</span> <span class="token function">compile</span><span class="token punctuation">(</span>template<span class="token punctuation">,</span> options<span class="token punctuation">)</span>
+
+  <span class="token comment">// turn code into functions</span>
+  <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">const</span> fnGenErrors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  res<span class="token punctuation">.</span>render <span class="token operator">=</span> <span class="token function">createFunction</span><span class="token punctuation">(</span>compiled<span class="token punctuation">.</span>render<span class="token punctuation">,</span> fnGenErrors<span class="token punctuation">)</span>
+  res<span class="token punctuation">.</span>staticRenderFns <span class="token operator">=</span> compiled<span class="token punctuation">.</span>staticRenderFns<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">code</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">createFunction</span><span class="token punctuation">(</span>code<span class="token punctuation">,</span> fnGenErrors<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// ...</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>cache<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> res<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">createCompilerCreator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    compile<span class="token punctuation">,</span>
+    compileToFunctions<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>总结起来这几个函数的调用关系如下</p> <div class="language- extra-class"><pre class="language-text"><code>createCompilerCreator -&gt; compileToFunctions -&gt; compile -&gt; baseCompile
+</code></pre></div><h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>编译，一句话就是 template 模板转换为 AST，最后生成中间代码的过程</p> <p>拨开层层HOC，总结起来涉及到三个核心函数</p> <ol><li><code>baseCompile</code>：编译过程的三个最核心步骤，最终生成了中间代码</li> <li><code>compile</code>：在<code>baseCompile</code>基础上增加 modules 和 directives 等的合并</li> <li><code>compileToFunctions</code>：将编译生成的代码转换成函数，最终返回了函数类型的render，staticRenderFns，这是后面渲染时的核心函数</li></ol> <div class="custom-block tip"><p class="custom-block-title">-_-</p> <p>生成AST -&gt; AST优化 -&gt; 生成中间代码 -&gt; 中间代码转化为渲染函数</p></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/vue/v2/overview/mount.html" class="prev">
+        mount
+      </a></span> <span class="next"><a href="/docs/vue/v2/compiler/ast.html">
+        AST
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.190980ee.js" defer></script><script src="/docs/assets/js/2.a1086257.js" defer></script><script src="/docs/assets/js/26.f7827a3a.js" defer></script><script src="/docs/assets/js/10.1b4016bc.js" defer></script><script src="/docs/assets/js/3.e71b4cdf.js" defer></script>
+  </body>
+</html>
